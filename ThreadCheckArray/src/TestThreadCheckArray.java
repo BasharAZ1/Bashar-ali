@@ -2,6 +2,20 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestThreadCheckArray {
+	/**
+	 * @param args
+	 *  This method initializes an integer array with the wanted size and elements of user,* The method searches for combinations of sums from the array to find if the sum entered 
+	 * by the user is possible
+	 */
+	
+	/**
+	 * @param array and a number
+	 * This class contains getters and setters for the variable used
+	 */
+	/**
+	 * @param sharedData
+	 * Sets and gets necessary flags, also runs the threads to find the wanted sum
+	 */
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
 			Thread thread1, thread2;

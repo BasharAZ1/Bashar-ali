@@ -8,6 +8,9 @@ public class ThreadCheckArray implements Runnable
 	ArrayList<Integer> array;
 	int b;
 	
+	/**
+	* @param sd - constructor for ThreadCheckArray and synchronizes according to sd parameter
+    */
 	public ThreadCheckArray(SharedData sd) 
 	{
 		this.sd = sd;	
@@ -19,6 +22,11 @@ public class ThreadCheckArray implements Runnable
 		winArray = new boolean[array.size()];
 	}
 	
+	/**
+	 * @param n
+	 * @param b
+	 * in this function 
+	 */
 	void rec(int n, int b)
 	{
 		synchronized (sd) 
@@ -52,6 +60,9 @@ public class ThreadCheckArray implements Runnable
 		rec(n-1, b);
 	}
 
+	/**
+	 * run() starts the threads and sets them using rec function
+	 */
 	public void run() {
 		if (array.size() != 1)
 			if (Thread.currentThread().getName().equals("thread1"))
